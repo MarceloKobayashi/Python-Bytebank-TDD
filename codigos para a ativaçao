@@ -1,0 +1,34 @@
+pip install virtualenv
+venv\Scripts\Activate
+pip install pytest==7.1.2
+pip freeze > requirements.txt
+
+
+
+TDD = test driven development
+1 - faz o teste
+2 - faz o código para que o teste passe
+3 - refatora o código para torná-lo mais legível
+
+pytest.ini = o pycharm dá prioridade ao que está dentro do arquivo ini e depois ao do pytest
+
+mark.skip = skipa a função
+mark.skipif = skipa a função se ela se encaixar nas condições
+mark.xfail = aceita uma falha ao invés do resultado
+
+pip install pytest-cov==3.0.0 = instala essa porra (cobertura)
+pip freeze > requirements.txt = atualiza o txt de requirements com essa porra
+pytest --cov=codigo tests/ --cov-report term-missing = mostra a linha do código que está sem cobertura
+pytest --cov=codigo tests/ --cov-report html = mesma coisa que o de cima, mas transforma em site(html)
+
+.coveragerc = pode excluir linhas do teste que não precisam de cobertura
+    source = ./codigo = faz com que a verificação da cobertura seja feita apenas no "codigo"
+    directory = coverage_relatorio_html = cria um diretório para os html serem adicionados
+
+pytest.ini
+    addopts = -v --cov=codigo tests/ --cov-report term-missing == toda vez que digitar o pytest, essas funções são reali
+                                                                  zadas também.
+
+depois de add ao pytest.ini
+    pytest --junitxml report.xml = gera um arquivo xml report
+    pytest --junitxml xml = gera um coverage xml

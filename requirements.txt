@@ -1,0 +1,11 @@
+atomicwrites==1.4.1
+attrs==23.1.0
+colorama==0.4.6
+coverage==7.2.7
+iniconfig==2.0.0
+packaging==23.1
+pluggy==1.2.0
+py==1.11.0
+pytest==7.1.2
+pytest-cov==3.0.0
+tomli==2.0.1
